@@ -30,12 +30,25 @@ Assumptions used:
 ## 3. Flowchart (Mermaid TD)
 ```mermaid
 flowchart TD
-    A([START]) --> B[/Enter Number/]
-    B --> C{Number is Even?}
-    C -->|YES| D[Print Even]
-    C -->|NO| E[Print Odd]
-    D --> F([STOP])
-    E --> F
+    A([Start]) --> B[/Enter product details and available stock/]
+    B --> C[/Enter customer orders and quantities/]
+    C --> D[/Enter order priority: High, Medium, Low/]
+    D --> E[Arrange orders by priority]
+    E --> F[High priority first, then Medium, then Low]
+    F --> G[Maintain input order for same priority]
+    G --> H[Select next order]
+    H --> I{Is stock available?}
+    I -- No --> J[Set fulfilled quantity to 0]
+    I -- Yes --> K[Compare ordered quantity with available stock]
+    K --> L[Calculate fulfilled quantity]
+    L --> M[Update available stock]
+    J --> N[Calculate outstanding quantity]
+    M --> N
+    N --> O{Are all orders processed?}
+    O -- No --> H
+    O -- Yes --> P[Display fulfilled and outstanding quantities]
+    P --> Q[Display remaining stock]
+    Q --> R([End])
 ```
 ## 4. Python Source Code
 
