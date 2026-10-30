@@ -32,12 +32,21 @@ Assumptions used:
 ## 3. Flowchart (Mermaid TD)
 ```mermaid
 flowchart TD
-    A([START]) --> B[/Enter Number/]
-    B --> C{Number is Even?}
-    C -->|YES| D[Print Even]
-    C -->|NO| E[Print Odd]
-    D --> F([STOP])
-    E --> F
+    A([Start]) --> B[/Input number of branches and products/]
+    B --> C[/Enter current stock and target stock/]
+    C --> D[/Enter maximum transfer quantity/]
+    D --> E[Calculate surplus and shortage]
+    E --> F{Any product with surplus and shortage?}
+    F -- No --> K[/Display final stock and transfer report/]
+    F -- Yes --> G[Select source and destination branches]
+    G --> H[Calculate transferable quantity]
+    H --> I{Transfer quantity is valid?}
+    I -- No --> J[Skip transfer]
+    I -- Yes --> L[Update stock of both branches]
+    L --> M[Update surplus and shortage]
+    M --> F
+    J --> F
+    K --> N([End])
 ```
 ## 4. Python Source Code
 
