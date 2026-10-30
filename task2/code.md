@@ -27,13 +27,24 @@ Assumptions used:
 
 ## 3. Flowchart (Mermaid TD)
 ```mermaid
+
 flowchart TD
-    A([Start]) --> B[/Enter a number/]
-    B --> C{Number % 2 == 0?}
-    C -->|Yes| D[Print Even]
-    C -->|No| E[Print Odd]
-    D --> F([Stop])
-    E --> F
+    A([Start]) --> B[/Input student details and room details/]
+    B --> C[Initialize room capacity and allocation list]
+    C --> D[Select next student]
+    D --> E{All students processed?}
+    E -- Yes --> K[Calculate unallocated students]
+    K --> L[/Display room allocation and final report/]
+    L --> M([End])
+    E -- No --> F{Student already assigned?}
+    F -- Yes --> G[Skip duplicate assignment]
+    F -- No --> H{Room available for student group?}
+    H -- No --> I[Mark student as unallocated]
+    H -- Yes --> J[Allocate student to eligible room]
+    J --> N[Update room capacity]
+    N --> D
+    G --> D
+    I --> D
 ```
 ## 4. Python Source Code
 
