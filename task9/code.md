@@ -28,6 +28,26 @@ Allocation rules:
 11. Stop the program.
 
 ## 3. Flowchart
+```mermaid
+flowchart TD
+    A([Start]) --> B[/Enter student scores/]
+    B --> C[/Enter required group sizes/]
+    C --> D[Calculate total students]
+    D --> E{Are group sizes valid?}
+    E -- No --> F[Display Invalid Group Sizes]
+    F --> Z([End])
+    E -- Yes --> G[Sort student scores in descending order]
+    G --> H[Create empty groups]
+    H --> I[Select next highest score]
+    I --> J[Find group with lowest total score and available space]
+    J --> K[Assign student to that group]
+    K --> L{All students assigned?}
+    L -- No --> I
+    L -- Yes --> M[Calculate group totals and averages]
+    M --> N[Find highest and lowest group scores]
+    N --> O[Calculate score difference]
+    O --> P[/Display groups, totals, averages and difference/]
+    P --> Z([End])
 
 
 # Energy Conservation Before-and-After Analysis
