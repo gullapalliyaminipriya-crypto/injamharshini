@@ -121,6 +121,3 @@ Total vacant beds: 0
 
 ```
 
-## 7. Result
-
-The program allocates students according to room capacity and group eligibility, detects duplicate student IDs, and identifies students who could not be accommodated. In this example, three students are allocated, one student remains unallocated, and one duplicate ID is detected.
