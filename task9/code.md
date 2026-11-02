@@ -95,8 +95,3 @@ Difference Between Totals: 10
 
 ```
 
-## 7. Result
-
-The program successfully allocates students into groups of specified sizes using a greedy score-balancing method. It calculates group totals and averages and reports the difference between the highest and lowest group totals.
-
-Note: This greedy method aims to balance scores efficiently, but it does not guarantee the mathematically optimal allocation in every case.
