@@ -108,7 +108,3 @@ Duplicate student IDs: 1
 Duplicate IDs found: S101
 
 ```
-
-## 7. Result
-
-The program successfully validates student identifiers, names, marks, attendance, and course records using Python lists and tuples. It detects duplicate IDs, missing values, invalid academic data, and inconsistent records, then generates a summary of valid and inconsistent student records.
