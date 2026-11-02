@@ -59,11 +59,7 @@ flowchart TD
     Q --> R[/Display Total Electricity Savings/]
     R --> S([End])
 ```
-## 4. Python Source Code
 
-```
-# Energy Conservation Before-and-After Analysisappliances = []n = int(input("Enter number of appliances: "))if n <= 0:    print("Invalid number of appliances.")    raise SystemExitfor i in range(n):    print(f"\nAppliance {i + 1}")    name = input("Enter appliance name: ").strip()    before = float(input("Enter usage before intervention (kWh): "))    after = float(input("Enter usage after intervention (kWh): "))    if not name or before < 0 or after < 0:        print("Invalid name or usage value.")        raise SystemExit    savings = before - after    if before > 0:        percentage = (savings / before) * 100    else:        percentage = None    if savings > 0:        status = "Energy saved"    elif savings < 0:        status = "Consumption increased"    else:        status = "No change"
-```
 
 ## 5. Sample Input
 
