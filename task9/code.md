@@ -48,49 +48,8 @@ flowchart TD
     N --> O[Calculate score difference]
     O --> P[/Display groups, totals, averages and difference/]
     P --> Z([End])
-
-
-# Energy Conservation Before-and-After Analysis
-
-```mermaid
-flowchart TD
-    A([Start]) --> B[/Enter number of appliances n/]
-    B --> C[Initialize i = 1 and Total Savings = 0]
-    C --> D{i <= n?}
-
-    D -- Yes --> E[/Enter appliance name/]
-    E --> F[/Enter before usage and after usage/]
-    F --> G{Are usage values non-negative?}
-
-    G -- No --> H[Display Invalid Input]
-    H --> F
-
-    G -- Yes --> I[Calculate Savings = Before - After]
-    I --> J{Is Before Usage zero?}
-
-    J -- Yes --> K[Percentage = Undefined]
-    J -- No --> L[Percentage = Savings / Before * 100]
-
-    K --> M[Add Savings to Total Savings]
-    L --> M
-
-    M --> N[Store appliance details]
-    N --> O[Increment i = i + 1]
-    O --> D
-
-    D -- No --> P[Sort appliances by savings descending]
-    P --> Q[Display appliance details and percentages]
-    Q --> R[Display appliance ranking]
-    R --> S[/Display Total Electricity Savings/]
-    S --> T([End])
 ```
 
-
-## 4. Python Source Code
-
-```
-# Student Group Formation with Score Balancingn = int(input("Enter number of students: "))if n <= 0:    print("Invalid number of students.")    raise SystemExitstudents = []for i in range(n):    score = float(input(f"Enter score of student {i + 1}: "))    if score < 0:        print("Scores cannot be negative.")        raise SystemExit    students.append([f"S{i + 1}", score])group_count = int(input("Enter number of groups: "))if group_count <= 0 or group_count > n:    print("Invalid number of groups.")    raise SystemExitgroup_sizes = []for i in range(group_count):    size = int(input(f"Enter size of group {i + 1}: "))    if size <= 0:        print("Group sizes must be positive.")        raise SystemExit    group_sizes.append(size)if sum(group_sizes) != n:    print("Error: Group sizes must equal the number of students.")    raise SystemExit# Sort students from highest score to loweststudents.sort(key=lambda student: student[1], reverse=True)# Each group stores student records and its current totalgroups = [[] for _ in range(group_count)]totals = [0] * group_count# Greedy score-balancing allocationfor student in students:    eligible_groups = [        i for i in range(group_count)        if len(groups[i]) < group_sizes[i]    ]    # Choose the eligible group with the lowest total    chosen = min(eligible_groups, key=lambda i: totals[i])    groups[chosen].append(student)    totals[chosen] += student[1]
-```
 
 ## 5. Sample Input
 
