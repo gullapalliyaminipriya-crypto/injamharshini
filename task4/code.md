@@ -138,6 +138,3 @@ Total outstanding quantity: 9
 
 ```
 
-## 7. Result
-
-The program prioritizes orders according to their priority categories, allocates available stock without exceeding inventory limits, and identifies fully fulfilled, partially fulfilled, and unfulfilled orders. It also calculates the outstanding quantities and displays the remaining warehouse stock.
