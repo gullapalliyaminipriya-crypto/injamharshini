@@ -48,11 +48,7 @@ flowchart TD
     J --> F
     K --> N([End])
 ```
-## 4. Python Source Code
 
-```
-# Multi-Branch Retail Inventory Transferbranches = []products = []n = int(input("Enter number of branches: "))p = int(input("Enter number of products: "))max_transfer = int(input("Enter maximum quantity per transfer: "))if n <= 0 or p <= 0 or max_transfer <= 0:    print("Invalid input.")    raise SystemExit# Input product namesfor i in range(p):    product = input(f"Enter product {i + 1} name: ")    products.append(product)# Input branch stock and target levelsfor i in range(n):    name = input(f"\nEnter branch {i + 1} name: ")    stock = []    target = []    for product in products:        current = int(input(f"{product} current stock: "))        required = int(input(f"{product} target stock: "))        if current < 0 or required < 0:            print("Stock and target values cannot be negative.")            raise SystemExit        stock.append(current)        target.append(required)
-```
 
 ## 5. Sample Input
 
