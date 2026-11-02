@@ -41,11 +41,7 @@ flowchart TD
     style D fill:#FFB6C1,stroke:#FF1493
     style E fill:#90EE90,stroke:#008000
 ```
-## 4. Python Source Code
 
-```
-    name = input("\nEnter building name: ")    electricity = []    water = []    for d in range(days):        e = float(input(            f"Day {d + 1} electricity (kWh): "        ))        w = float(input(            f"Day {d + 1} water (kL): "        ))        if e < 0 or w < 0:            print("Consumption cannot be negative.")            raise SystemExit        electricity.append(e)        water.append(w)    total_e = sum(electricity)    total_w = sum(water)    avg_e = total_e / days    avg_w = total_w / days    electricity_cost = total_e * ELECTRICITY_RATE    water_cost = total_w * WATER_RATE    total_cost = electricity_cost + water_cost    if electricity[0] != 0:        e_change = (            (electricity[-1] - electricity[0])            / electricity[0]        ) * 100    else:        e_change = 0 if electricity[-1] == 0 else None    if water[0] != 0:        w_change = (            (water[-1] - water[0]) / water[0]        ) * 100    else:        w_change = 0 if water[-1] == 0 else None    excessive = []    if avg_e > ELECTRICITY_LIMIT:        excessive.append("Electricity")    if avg_w > WATER_LIMIT:        excessive.append("Water")    # Lower consumption gives a lower score.    # Score = 60% electricity + 40% water.    score = (0.6 * avg_e / ELECTRICITY_LIMIT             + 0.4 * avg_w / WATER_LIMIT) * 100    buildings.append({        "name": name,        "total_e": total_e,        "total_w": total_w,        "avg_e": avg_e,        "avg_w": avg_w,        "electricity_cost": electricity_cost,        "water_cost": water_cost,        "total_cost": total_cost,        "e_change": e_change,        "w_change": w_change,        "excessive": excessive,        "score": score    })# Display individual building reportsprint("\n========== CAMPUS AUDIT REPORT ==========")
-```
 
 ## 5. Sample Input
 
