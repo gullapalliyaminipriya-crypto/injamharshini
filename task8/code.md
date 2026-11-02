@@ -105,6 +105,3 @@ Batches needing inspection: 2
 
 ```
 
-## 7. Result
-
-The Python program successfully stores production data in nested lists, calculates defect percentages for each batch, identifies batches exceeding the 5% quality threshold, and displays the overall manufacturing quality report.
