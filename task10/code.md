@@ -103,6 +103,4 @@ Overall status: Excess collection
 
 ```
 
-## 7. Result
 
-The program calculates passenger fares using category-based discounts, determines expected revenue for each route, compares it with actual collections, and identifies revenue shortages or excess collections. The overall reconciliation report helps transport authorities monitor fare collection and detect discrepancies.
