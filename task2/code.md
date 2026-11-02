@@ -46,11 +46,7 @@ flowchart TD
     G --> D
     I --> D
 ```
-## 4. Python Source Code
 
-```
-# University Hostel Room Allocationstudents = []rooms = []duplicate_ids = []n = int(input("Enter number of students: "))if n < 0:    print("Invalid number of students.")    raise SystemExit# Input student informationfor i in range(n):    print(f"\nStudent {i + 1}")    sid = input("Enter student ID: ").strip()    group = input("Enter group (A/B): ").strip().upper()    if group not in ("A", "B"):        print("Invalid group. Enter A or B.")        raise SystemExit    if any(s["id"] == sid for s in students):        duplicate_ids.append(sid)        print("Duplicate ID detected. Student not added.")        continue    students.append({        "id": sid,        "group": group    })# Input room informationr = int(input("\nEnter number of rooms: "))
-```
 
 ## 5. Sample Input
 
