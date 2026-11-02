@@ -138,6 +138,3 @@ Overall result: Energy consumption reduced
 
 ```
 
-## 7. Result
-
-The program compares appliance-wise electricity usage before and after an intervention, calculates energy savings and savings percentages, and ranks appliances by achieved savings. In this example, the campus saves 185 kWh, achieving an overall electricity consumption reduction of 27.61%.
