@@ -115,6 +115,3 @@ Important correction: The sample output's initial inventory analysis should be c
 - Branch-A: Pen surplus = 10; Notebook shortage = 5.
 - Branch-B: Pen shortage = 5; Notebook surplus = 5.
 
-## 7. Result
-
-The program compares branch-level stock with target levels, calculates surpluses and shortages, and generates transfers that respect the maximum quantity per transaction. It updates inventory after each transfer and reports any shortages that remain.
