@@ -128,7 +128,3 @@ Total water: 54.00 kL
 Total expenditure: Rs. 6740.00
 
 ```
-
-## 7. Result
-
-The program successfully calculates electricity and water consumption, estimates costs, measures percentage changes, identifies excessive consumption, and ranks campus buildings. In this example, Library ranks first, while Laboratory requires attention because both its electricity and water usage exceed the defined limits.
