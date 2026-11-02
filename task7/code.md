@@ -57,11 +57,6 @@ flowchart TD
 
 
 
-## 4. Python Source Code
-
-```
-# Tuple-Based Course Registration Validationvalid_courses = {    "Python",    "Mathematics",    "AI",    "Web Development"}# Each forbidden pair is a frozensetinvalid_combinations = [    frozenset(("Python", "AI")),    frozenset(("Mathematics", "Web Development"))]registrations = []seen_registrations = set()duplicate_registrations = []invalid_courses_found = []student_courses = {}violations = {}n = int(input("Enter number of registrations: "))if n < 0:    print("Invalid number of registrations.")    raise SystemExit# Input registrations as tuplesfor i in range(n):    print(f"\nRegistration {i + 1}")    student_id = input("Enter student ID: ").strip()    course = input("Enter course name: ").strip()
-```
 
 ## 5. Sample Input
 
