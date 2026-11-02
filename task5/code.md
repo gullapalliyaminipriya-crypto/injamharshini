@@ -37,11 +37,7 @@ flowchart TD
     D --> F([STOP])
     E --> F
 ```
-## 4. Python Source Code
 
-```
-# Integrated Student Record Consistency Checkerstudents = []seen_ids = set()duplicate_ids = set()n = int(input("Enter number of students: "))if n <= 0:    print("Invalid number of students.")    raise SystemExitfor i in range(n):    print(f"\nStudent {i + 1}")    sid = input("Enter student ID: ").strip()    name = input("Enter student name: ").strip()    marks_input = input("Enter marks (0-100): ").strip()    attendance_input = input(        "Enter attendance percentage (0-100): "    ).strip()    courses_input = input(        "Enter courses separated by commas: "    ).strip()    errors = []    # Validate student ID    if not sid:        errors.append("Missing student ID")    elif sid in seen_ids:        duplicate_ids.add(sid)        errors.append("Duplicate student ID")    else:        seen_ids.add(sid)
-```
 
 ## 5. Sample Input
 
