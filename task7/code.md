@@ -134,7 +134,3 @@ Invalid course records: 1
 Students with violations: 4
 
 ```
-
-## 7. Result
-
-The program uses tuples to store course registrations and validates them against the specified rules. It detects duplicate registrations, invalid course names, and prohibited course combinations, then identifies students whose selections violate the registration rules.
