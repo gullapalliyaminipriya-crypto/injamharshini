@@ -50,11 +50,6 @@ flowchart TD
     P --> Q[Display remaining stock]
     Q --> R([End])
 ```
-## 4. Python Source Code
-
-```
-        fulfilled = min(requested, stock[product])        stock[product] -= fulfilled        if fulfilled == requested:            status = "Fully fulfilled"        elif fulfilled > 0:            status = "Partially fulfilled"        else:            status = "Unfulfilled"    outstanding = requested - fulfilled    report.append({        **order,        "fulfilled": fulfilled,        "outstanding": outstanding,        "status": status    })# Display fulfilment reportprint("\n===== ORDER FULFILMENT REPORT =====")for order in report:    print(f"\nOrder ID: {order['id']}")    print(f"Product: {order['product']}")    print(f"Priority: {order['priority']}")    print(f"Ordered quantity: {order['quantity']}")    print(f"Fulfilled quantity: {order['fulfilled']}")    print(f"Outstanding quantity: {order['outstanding']}")    print(f"Status: {order['status']}")# Display remaining stockprint("\n===== REMAINING WAREHOUSE STOCK =====")for product, quantity in stock.items():    print(f"{product}: {quantity} units")total_ordered = sum(o["quantity"] for o in report)total_fulfilled = sum(o["fulfilled"] for o in report)total_outstanding = sum(o["outstanding"] for o in report)print("\n===== SUMMARY =====")print("Total quantity ordered:", total_ordered)print("Total quantity fulfilled:", total_fulfilled)print("Total outstanding quantity:", total_outstanding)
-```
 
 ## 5. Sample Input
 
