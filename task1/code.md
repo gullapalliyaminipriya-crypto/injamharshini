@@ -1,4 +1,4 @@
-# Integrated Campus Energy and Water Audit
+
 
 ## 1. Problem Statement
 
