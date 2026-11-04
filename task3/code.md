@@ -1,4 +1,4 @@
-# Multi-Branch Retail Inventory Transfer
+
 
 ## 1. Problem Statement
 
