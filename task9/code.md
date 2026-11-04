@@ -1,4 +1,4 @@
-# Student Group Formation with Score Balancing – Python Project
+
 
 ## 1. Problem Statement
 
