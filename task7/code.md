@@ -1,4 +1,4 @@
-# Tuple-Based Course Registration Validation
+
 
 ## 1. Problem Statement
 
