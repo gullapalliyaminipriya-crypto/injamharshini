@@ -1,4 +1,4 @@
-# Integrated Warehouse Order Prioritization
+
 
 ## 1. Problem Statement
 
