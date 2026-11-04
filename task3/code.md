@@ -110,8 +110,4 @@ Total remaining shortage: 0
 
 ```
 
-Important correction: The sample output's initial inventory analysis should be calculated and printed before the transfer loop. Also, for Branch-A's Pen, the initial surplus is 10 units, not 5. The correct initial analysis is:
-
-- Branch-A: Pen surplus = 10; Notebook shortage = 5.
-- Branch-B: Pen shortage = 5; Notebook surplus = 5.
 
