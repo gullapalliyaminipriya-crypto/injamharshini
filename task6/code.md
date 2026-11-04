@@ -1,4 +1,4 @@
-# Energy Conservation Before-and-After Analysis
+
 
 ## 1. Problem Statement
 
