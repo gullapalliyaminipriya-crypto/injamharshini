@@ -1,4 +1,4 @@
-# Manufacturing Quality Control Matrix – Python Project
+
 
 ## 1. Problem Statement
 
