@@ -1,4 +1,4 @@
-# Integrated Student Record Consistency Checker
+
 
 ## 1. Problem Statement
 
